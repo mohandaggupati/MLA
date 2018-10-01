@@ -1,0 +1,54 @@
+<? xml version="1.0"encoding="UTF-8"?>
+<xsl:stylesheet version="1.0">
+<xsl:xsl="http//www.w3.org/1999/xsl/transform">
+<xsl:template match="/">
+<html>
+<body>
+<h2>bookstore</h2>
+<table border="3">
+<tr bgcolor="pink">
+<th>id</th>
+<th>bookname</th>
+<th>img</th>
+<th>author</th>
+<th>price</th>
+<th>quantity</th>
+</tr>
+<!--for-each processing instruction looks for each element matching the path expression-->
+<xsl:for-each select="bookstore/book">
+<tr>
+<td>001
+<td>let us c
+<td><img src="e\wtlab\c.jpg"height=65 width-56>
+<td>yeswanth kumar
+<td>500
+<td>10
+</tr>
+<tr>
+<td>002
+<td>BEEE
+<td>vk mehta
+<td>500
+<td>05
+</tr>
+<tr>
+<td>003
+<td>EG
+<td>BK GOEL
+<td>279
+<td>15
+</tr>
+<!--value-of processing instruction process the value of the element matching the path expression-->
+<xsl:value-of select=@id"/>
+</td>
+<td><xsl:value-of select="title"/></td>
+<td><xsl:value-of select="author"/></td>
+<td><xsl:value-of select="price"/></td>
+<td><xsl:value-of select="quantity"/></td>
+</tr>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
