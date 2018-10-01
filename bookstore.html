@@ -12,7 +12,7 @@
 <th>quantity</th>
 </tr>
 <!--for-each processing instruction looks for each element matching the path expression-->
-<xsl:for-each select="bookstore/book">
+
 <tr>
 <td>001
 <td>let us c
@@ -38,10 +38,7 @@
 <!--value-of processing instruction process the value of the element matching the path expression-->
 
 </td>
-<td><xsl:value-of select="title"/></td>
-<td><xsl:value-of select="author"/></td>
-<td><xsl:value-of select="price"/></td>
-<td><xsl:value-of select="quantity"/></td>
+
 </tr>
 
 </table>
